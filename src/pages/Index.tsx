@@ -1,10 +1,12 @@
 import { PlayCircle, Video } from "lucide-react";
 import { Features } from "@/components/sections/Features";
 import { Hero } from "@/components/sections/Hero";
+import { Pricing } from "@/components/sections/Pricing";
 import { Section, SectionHeading } from "@/components/Section";
 import { Steps } from "@/components/sections/Steps";
 import { ButtonLink } from "@/components/ui/button";
 import { heroCards, featuresItems, stepsItems, testimonialVideos } from "@/content/pages/Index";
+import { pricingItems } from "@/content/pages/Programas";
 
 export default function IndexPage() {
   return (
@@ -85,6 +87,14 @@ export default function IndexPage() {
         title="Como começar em 3 passos"
         layout="horizontal"
         items={stepsItems}
+      />
+      <Pricing
+        id="precos"
+        tone="soft"
+        title="Investimento por programa"
+        intro="Valores acessíveis, sem taxa de matrícula e sem fidelidade."
+        buttonText="Agendar aula experimental"
+        items={pricingItems}
       />
       {/* Chamada final */}
       <Section id="cta-final" tone="dark">
