@@ -1,0 +1,28 @@
+{
+  "roles": [
+    { "id": "admin", "label": "Administrador" },
+    { "id": "pai", "label": "Pai/Responsável" }
+  ],
+  "auth": { "signup": "open", "default_role": "pai" },
+  "collections": [
+    {
+      "id": "matriculas",
+      "label": "Matrículas",
+      "label_singular": "Matrícula",
+      "title_field": "nome_responsavel",
+      "owner_field": "pai",
+      "fields": [
+        { "id": "nome_responsavel", "label": "Nome do responsável", "type": "text", "required": true },
+        { "id": "email", "label": "E-mail", "type": "email", "required": true },
+        { "id": "telefone", "label": "Telefone/WhatsApp", "type": "phone", "required": true },
+        { "id": "idade_crianca", "label": "Idade da criança", "type": "text", "required": true },
+        { "id": "programa_escolhido", "label": "Programa escolhido", "type": "select", "options": ["Baby (6 meses a 3 anos)", "Kids (4 a 6 anos)", "Junior (7 a 10 anos)", "Teen (11 a 14 anos)"], "required": true },
+        { "id": "data_agendamento", "label": "Data de agendamento", "type": "date" },
+        { "id": "pai", "label": "Pai/Responsável", "type": "user" }
+      ],
+      "permissions": {
+        "pai": { "read": "own", "create": true, "update": "none", "delete": "none" }
+      }
+    }
+  ]
+}

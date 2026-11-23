@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+/* Cores, fontes e cantos do site — mude aqui e o site inteiro acompanha. */
+@theme {
+  --color-primary: #2A9DF4;
+  --color-accent: #FFD700;
+  --color-background: #f0fdfa;
+  --color-foreground: #1e293b;
+  --color-muted: color-mix(in oklab, var(--color-foreground) 5%, var(--color-background));
+  /* Rodapé escuro (referência do cliente): fundo, textos e linhas. */
+  --color-footer: #25222f;
+  --color-footer-text: #d5d3da;
+  --color-footer-muted: #9a97a2;
+  --color-footer-line: #3b3944;
+  --font-sans: "Open Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --radius-site: 1.25rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
